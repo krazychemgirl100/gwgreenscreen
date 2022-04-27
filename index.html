@@ -1,0 +1,63 @@
+<html lang="en">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Clerance Badge</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/4.6.1/cerulean/bootstrap.min.css"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="style1.min.css" rel="stylesheet">
+    <link href="style2.min.css" rel="stylesheet">
+    <link href="style3.css" rel="stylesheet">
+    
+    <style>
+        body {
+            overflow:  hidden;
+        }
+    </style>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body class="">
+    <div class="container">
+    <div class="row">
+        <div class="col-12">
+            <label for="name">Name:</label>
+  <input type="text" id="name" name="name">
+        </div>
+
+        <div class="col-12">
+            <label for="dob">Date of Birth (ex: Jan 2):</label>
+  <input type="text" id="dob" name="dob">
+        </div>
+
+        <div class="col-12">
+            <label for="gwid">GWID:</label>
+  <input type="text" id="gwid" name="gwid">
+        </div>
+    </div>
+  <div class="col-12">
+
+<a href="javascript:generateqrcode();" class="button">Create Pass</a>
+    </div>
+
+  </div>
+
+
+<script src="/wwwroot/lib/jquery/jquery.min.js"></script>
+<script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="/Resources/js/plugins/bootbox.min.js"></script>
+<script>
+  function generateqrcode(){
+    var name = document.getElementById("name").value;
+    var dob = document.getElementById("dob").value;
+    var gwuid = document.getElementById("gwid").value;
+    document.location = "gs.html?name=" + name + "&dob=" + dob + "&gwuid=" + gwuid;
+  }
+
+</script>
+</body>
+</html>
+
+
+
+
