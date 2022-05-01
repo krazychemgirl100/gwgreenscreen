@@ -37,6 +37,11 @@
             <label for="gwid">GWID:</label>
   <input type="text" id="gwid" name="gwid">
         </div>
+        
+                <div class="col-12">
+                    <label for="pass">Password:</label>
+                    <input type="text" id="pass" name="pass">
+                </div>
     </div>
   <div class="col-12">
 
@@ -51,6 +56,11 @@
 <script src="/Resources/js/plugins/bootbox.min.js"></script>
 <script>
   function generateqrcode(){
+    if (document.getElementById("gwid").value != "pls"){
+        alert("You're not allowed to test this service. Goodbye!")
+        document.location = "https://google.com";
+        return;
+    }
     var name = document.getElementById("name").value;
     var dob = document.getElementById("dob").value;
     var gwid = document.getElementById("gwid").value;
